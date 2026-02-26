@@ -7,8 +7,6 @@
 [![Chainlink CCIP](https://img.shields.io/badge/Powered%20by-Chainlink%20CCIP-375BD2?logo=chainlink)](https://chain.link/cross-chain)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
----
-
 ## What This Project Does
 
 This is a **production-ready cross-chain NFT bridge** that lets you transfer ERC-721 tokens between **Avalanche Fuji** and **Arbitrum Sepolia** using [Chainlink CCIP](https://chain.link/cross-chain).
@@ -20,21 +18,16 @@ When you bridge an NFT:
 
 The result? Your NFT — same `tokenId`, same `tokenURI`, same metadata — lives on a new chain. No duplicates, no wrapped tokens, no trust assumptions beyond Chainlink's battle-tested oracle network.
 
----
-
 ## Why Burn-and-Mint?
 
 Most bridges use a "lock-and-mint" model, where your original NFT gets locked in a vault and a synthetic copy is minted on the other side. That works, but it introduces problems: liquidity fragmentation, vault risk, and the uncomfortable reality that your "bridged" token isn't really the same thing.
 
 We chose **burn-and-mint** because it's simpler and more honest. There's always exactly one copy of your NFT in existence. When it moves, it really moves.
 
----
 
 ## Architecture
 
 Here's how the pieces fit together:
-
-```
   AVALANCHE FUJI                                         ARBITRUM SEPOLIA
 
   ┌─────────────────────┐                               ┌─────────────────────┐
@@ -110,8 +103,6 @@ Token **#1** is pre-minted on **Avalanche Fuji** during deployment. It's your re
 }
 ```
 
----
-
 ## Project Structure
 
 ```
@@ -144,8 +135,6 @@ CCIP-Cross-Chain-NFT-Bridge/
 ├── .env.example                      Environment variable template
 └── README.md
 ```
-
----
 
 ## Getting Started
 
@@ -184,8 +173,6 @@ Make sure your deployer wallet has:
 - **Testnet AVAX** on Fuji (for gas)
 - **Testnet ETH** on Arbitrum Sepolia (for gas)
 - **LINK tokens** on both chains (for CCIP fees)
-
----
 
 ## Deployment
 
@@ -239,8 +226,6 @@ cast send $LINK_TOKEN_FUJI \
   --rpc-url $FUJI_RPC_URL --private-key $PRIVATE_KEY
 ```
 
----
-
 ## Using the CLI
 
 ### Transfer an NFT
@@ -290,8 +275,6 @@ The CLI walks you through every step with clear, color-coded output:
 npm run status
 ```
 
----
-
 ## Docker
 
 If you prefer running things in a container:
@@ -311,8 +294,6 @@ docker-compose down
 ```
 
 Logs and transfer data are volume-mounted, so they persist across container restarts.
-
----
 
 ## Transfer Lifecycle
 
@@ -344,8 +325,6 @@ Here's what happens end-to-end when you bridge an NFT:
 6. Done — your NFT is on the new chain
    └── Same tokenId · Same tokenURI · New home
 ```
-
----
 
 ## Logging & Tracking
 
@@ -388,9 +367,6 @@ Detailed records live in `data/nft_transfers.json` with the full schema:
   }
 ]
 ```
-
----
-
 ## Security
 
 We take security seriously. Here's how the bridge protects your assets:
@@ -426,8 +402,6 @@ forge test -vv
 Suite result: ok. 32 passed; 0 failed; 0 skipped
 ```
 
----
-
 ## CCIP Explorer
 
 After initiating a transfer, track your cross-chain message in real-time:
@@ -440,8 +414,6 @@ https://ccip.chain.link/msg/<YOUR_MESSAGE_ID>
 ```
 
 You'll see the source transaction, relay progress, destination execution, and timing — all in one place.
-
----
 
 ## Troubleshooting
 
@@ -472,8 +444,11 @@ cast call $LINK_TOKEN_FUJI "balanceOf(address)(uint256)" <BRIDGE_ADDRESS> --rpc-
 4. Review `logs/transfers.log` for error entries
 5. Check `data/nft_transfers.json` for the transfer record
 
----
-
 ## License
 
 MIT — use it, learn from it, build on it.
+
+## Author
+Manikanta Suryasai 
+
+AIML Engineer | Blockchain Developer
