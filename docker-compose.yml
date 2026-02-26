@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  bridge:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ccip-nft-bridge
+    env_file:
+      - .env
+    volumes:
+      - ./deployment.json:/app/deployment.json:ro
+      - ./logs:/app/logs
+      - ./data:/app/data
+      - ./.env:/app/.env:ro
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
