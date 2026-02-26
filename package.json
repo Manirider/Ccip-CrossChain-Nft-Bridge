@@ -1,0 +1,36 @@
+{
+  "name": "ccip-cross-chain-nft-bridge",
+  "version": "1.0.0",
+  "description": "Production-ready Chainlink CCIP Cross-Chain NFT Bridge with burn-and-mint model",
+  "main": "cli/index.js",
+  "scripts": {
+    "transfer": "node cli/index.js",
+    "status": "node cli/status.js",
+    "lint": "eslint cli/",
+    "test": "echo \"See Foundry tests in test/\" && exit 0"
+  },
+  "keywords": [
+    "chainlink",
+    "ccip",
+    "nft",
+    "cross-chain",
+    "bridge",
+    "avalanche",
+    "arbitrum",
+    "erc721"
+  ],
+  "author": "CCIP NFT Bridge Team",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "ethers": "^6.9.0",
+    "uuid": "^9.0.0",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
