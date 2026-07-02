@@ -1,0 +1,8 @@
+Repository: Ccip-CrossChain-Nft-Bridge
+Description: Production-ready Cross-Chain NFT Bridge using Chainlink CCIP with metadata preservation, CLI automation, Docker support, and transfer tracking..
+Topics: portfolio-project
+
+GitHub Settings Updates:
+1. Go to https://github.com/Manirider/Ccip-CrossChain-Nft-Bridge/settings
+2. Update the Description field to: Production-ready Cross-Chain NFT Bridge using Chainlink CCIP with metadata preservation, CLI automation, Docker support, and transfer tracking..
+3. Add the following tags under Topics: portfolio-project
